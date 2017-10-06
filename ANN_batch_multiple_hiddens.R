@@ -1,4 +1,4 @@
-# Multiclassification by multiple hidden layers DNN using batch learning with cross-entropy loss. 
+# Multiclassification by multiple hidden layers ANN using batch learning with cross-entropy loss. 
 # Author: Michael Ruochen Zeng, micalzrc@gmail.com
 rm(list = ls())
 library(pryr)
