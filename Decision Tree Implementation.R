@@ -290,28 +290,6 @@ Evaluate_tree <- function(tree, data) {
   return(pred)
 }
 
-####################################### Tony Example ###########################################################
-dataset = c(2.771244718,1.784783929,0,
-            1.728571309,1.169761413,0,
-            3.678319846,2.81281357,0,
-            3.961043357,2.61995032,0,
-            2.999208922,2.209014212,0,
-            7.497545867,3.162953546,1,
-            9.00220326,3.339047188,1,
-            7.444542326,0.476683375,1,
-            10.12493903,3.234550982,1,
-            6.642287351,3.319983761,1)
-dataset <- t(matrix(dataset, nrow = 3))
-dataset <- as.data.table(dataset)
-split <- Get_split(dataset)
-
-tree <- Build_tree(dataset, max_depth = 3, min_size = 1)
-Print_tree(tree)
-pred <- Evaluate_tree(tree, dataset)
-CrossTable(dataset$V3, pred,
-           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
-           dnn = c('True Class', 'Predicted Class'))
-
 ####################################### Real Example ###########################################################
 ####################################### Configuration Data #####################################################
 # Banknote authentication.
